@@ -32,6 +32,7 @@ public class DAOImpl implements AGDAO {
 		rs.next();
 		long farmer_count = rs.getLong(1);
 		System.out.println("x"+farmer_count);
+		con.close();
 		return farmer_count;
 	}
 
@@ -51,6 +52,7 @@ public class DAOImpl implements AGDAO {
 		stmt = con.prepareStatement("UPDATE farmer_count SET count_of_farmers = ?");
 		stmt.setLong(1, getFarmersCount()+1);
 		stmt.execute();
+		con.close();
 		return fid;
 	}
 
@@ -58,7 +60,12 @@ public class DAOImpl implements AGDAO {
 		Connection con = dbc.getConnection();
 		PreparedStatement stmt = con.prepareStatement("select * from farmer_details where fid= ?");
 		stmt.setString(1, fid);
+		try {
 		return stmt.execute();
+		}
+		finally {
+			con.close();
+		}
 	}
 
 	public Farmer getFarmerDetails(String fid) throws ClassNotFoundException, SQLException {
@@ -73,6 +80,7 @@ public class DAOImpl implements AGDAO {
 		farmer.setLocation(rs.getString("location_of_farming"));
 		farmer.setMobileNumberOfFarmer(rs.getString("mobilenumber_of_farmer"));
 		farmer.setPincode(rs.getString("pincode"));
+		con.close();
 		return farmer;
 	}
 
@@ -85,6 +93,7 @@ public class DAOImpl implements AGDAO {
 		stmt.setString(4, quantity);
 		stmt.setString(5, total);
 		stmt.execute();
+		con.close();
 		return true;
 	}
 
@@ -116,6 +125,7 @@ public class DAOImpl implements AGDAO {
 			j++;
 			}
 		}
+		con.close();
 		return result;
 	}
 
