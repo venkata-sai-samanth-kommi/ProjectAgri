@@ -36,8 +36,12 @@ public class SignUpServlet extends HttpServlet {
 			request.setAttribute("ac",dbs.createFarmer(nameOfFarmer, mobileNumberOfFarmer, acres, location, pincode));
 			RequestDispatcher RequetsDispatcherObj =request.getRequestDispatcher("successSignup.jsp");
 			RequetsDispatcherObj.forward(request, response);
-		} catch (ClassNotFoundException | SQLException e) {
+		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		catch(SQLException e)
+		{
 			e.printStackTrace();
 		}
 	}
