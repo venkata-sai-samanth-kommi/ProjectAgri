@@ -1,9 +1,9 @@
 package com.agriproject.dbconnection;
 
 public class DBDetails {
-	private String uname ="root";
-	private String pwd = "root";
-	private String url = "jdbc:mysql://localhost:3306/sam?autoReconnect=true&useSSL=false";
+	private String uname ="rbbhf2agftvgz7lg";
+	private String pwd = "oat3wgcetmwzffae";
+	private String url = "mysql://rbbhf2agftvgz7lg:oat3wgcetmwzffae@u3y93bv513l7zv6o.chr7pe7iynqr.eu-west-1.rds.amazonaws.com:3306/zjxtqzkl7647m4g6";
 	/**
 	 * @return the uname
 	 */
