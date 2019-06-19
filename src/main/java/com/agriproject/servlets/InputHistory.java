@@ -29,8 +29,12 @@ public class InputHistory extends HttpServlet {
 			request.setAttribute("result",(String[][])dbs.getInputHistory((String)hs.getAttribute("farmer_id")));
 			RequestDispatcher rd = request.getRequestDispatcher("inputHistory.jsp");    
 			rd.forward(request, response);
-		} catch (ClassNotFoundException | SQLException e) {
+		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		catch(SQLException e)
+		{
 			e.printStackTrace();
 		}
 	}

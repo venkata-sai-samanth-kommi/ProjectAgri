@@ -42,8 +42,12 @@ public class LoginServlet extends HttpServlet {
 			} else {
 				out.print("user not found");
 			}
-		} catch (ClassNotFoundException | SQLException e) {
+		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		catch(SQLException e)
+		{
 			e.printStackTrace();
 		}
 	}

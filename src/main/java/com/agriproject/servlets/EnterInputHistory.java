@@ -35,8 +35,12 @@ public class EnterInputHistory extends HttpServlet {
 				RequestDispatcher RequetsDispatcherObj =request.getRequestDispatcher("inputInsertSuccess.jsp");
 				RequetsDispatcherObj.forward(request, response);
 			}
-		} catch (ClassNotFoundException | SQLException e) {
+		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		catch(SQLException e)
+		{
 			e.printStackTrace();
 		}
 	}
