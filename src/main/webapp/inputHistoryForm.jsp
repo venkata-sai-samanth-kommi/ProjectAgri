@@ -22,12 +22,12 @@
 			</div>
 			<div class="form-group">
 				<label for="price">Price :</label> <input type="text"
-					onchange="totalCalculator()" class="form-control" id="price"
+					 class="form-control" id="price"
 					placeholder="Enter Price" name="price">
 			</div>
 			<div class="form-group">
 				<label for="quantity">Quantity :</label> <input type="text"
-					onchange="totalCalculator()" class="form-control" id="quantity"
+					 class="form-control" id="quantity"
 					placeholder="Enter Quantity" name="quantity">
 			</div>
 			<div class="form-group">
