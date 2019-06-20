@@ -39,7 +39,7 @@
 		</form>
 	</div>
 	<script>
-	$("#price,#quantity").keyup(function() {
+	$("#price,#quantity").focus(function() {
 		$('#total').val($('#price').val() * $('#quantity').val());
 	});
 </script>
