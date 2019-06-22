@@ -23,7 +23,7 @@ public class HomeController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		HttpSession hs = request.getSession(false);
-		if((hs!=null) && (hs.getAttribute("sessionTRruth")=="true"))
+		if((hs!=null) && (hs.getAttribute("sessionTRruth")=="true") && hs.getAttribute("uname")!=null)
 		{
 			RequestDispatcher rd=request.getRequestDispatcher("home.jsp"); 
 			rd.forward(request, response);

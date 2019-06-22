@@ -15,9 +15,9 @@
 				<a class="navbar-brand" href="#">Ag Project</a>
 			</div>
 			<ul class="nav navbar-nav navbar-right">
-				<li class="active"><a href="registrationform.jsp"><span
+				<li class="active"><a href="Registration"><span
 						class="glyphicon glyphicon-user"></span>Sign Up</a></li>
-				<li><a href="login.jsp"><span
+				<li><a href="LoginForm"><span
 						class="glyphicon glyphicon-log-in"></span>Login</a></li>
 			</ul>
 		</div>
