@@ -45,4 +45,9 @@ public class DataBaseService {
 		return daoimpl.getInputHistory(fid);
 	}
 
+	public boolean matchAdminWithPass(String name, String password) throws ClassNotFoundException, SQLException {
+		DAOImpl daoimpl =  new DAOImpl();
+		return daoimpl.matchAdminWithPass(name,password);
+	}
+
 }

@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>input form</title>
 <meta charset="ISO-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -13,8 +14,7 @@
 <body>
 	<%if(session.getAttribute("uname")==null)
 		response.sendRedirect("notloggedin.jsp");
-		else
-		out.println("elcome");%>
+		%>
 	<jsp:include page="home.jsp" />
 	<div class="container" id="registrationform">
 		<h2>Input Entry Form</h2>

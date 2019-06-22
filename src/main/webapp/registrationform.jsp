@@ -9,6 +9,8 @@
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 </head>
 <body>
+	<%if(session.getAttribute("admin")==null)
+		response.sendRedirect("adminNotLoggedin.jsp");%>
 	<jsp:include page="commonheader.jsp" />
 	<div class="container" id="registrationform">
 		<h2>Farmer Registration Form</h2>

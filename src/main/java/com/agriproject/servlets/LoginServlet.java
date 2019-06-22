@@ -1,7 +1,6 @@
 package com.agriproject.servlets;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.SQLException;
 
 import javax.servlet.RequestDispatcher;
@@ -29,19 +28,17 @@ public class LoginServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		DataBaseService dbs = new DataBaseService();
-		PrintWriter out = response.getWriter();
 		String fid = request.getParameter("fid");
 		try {
 			if (dbs.find(fid)) {
 				HttpSession hs = request.getSession();
-				hs.setAttribute("sessionTRruth", "true");
 				hs.setAttribute("farmer_id", fid);
 				hs.setAttribute("uname", dbs.getFarmerDeatils(fid).getNameOfFarmer());
-				RequestDispatcher rd = request.getRequestDispatcher("HomeController");
-				System.out.println("bwjbrvjhb");
+				RequestDispatcher rd = request.getRequestDispatcher("home.jsp");
 				rd.forward(request, response);
 			} else {
-				out.print("user not found");
+				RequestDispatcher rd = request.getRequestDispatcher("userNotFound.jsp");
+				rd.forward(request, response);
 			}
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -49,7 +46,8 @@ public class LoginServlet extends HttpServlet {
 		}
 		catch(SQLException e)
 		{
-			e.printStackTrace();
+			RequestDispatcher rd = request.getRequestDispatcher("userNotFound.jsp");
+			rd.forward(request, response);
 		}
 	}
 

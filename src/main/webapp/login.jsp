@@ -6,9 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-<title>Project Index</title>
+<title>farmer login</title>
 </head>
 <body>
+	<%if(session.getAttribute("admin")==null)
+		response.sendRedirect("adminNotLoggedin.jsp");%>
 	<jsp:include page="commonheader.jsp" />
 	<div class="container">
 		<h2>Farmer Login Form</h2>

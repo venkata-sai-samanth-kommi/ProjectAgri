@@ -26,14 +26,14 @@
 				<li><a href="InputHistory"><span></span>INPUT HISTORY</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li class="active"><a href="#"><span
-						class="glyphicon glyphicon-user"></span><%=session.getAttribute("uname")%></a></li>
-				<li><a href="Logout"><span
+				<li class="active"><a href="#" style="color:green"><span
+						class="glyphicon glyphicon-user"></span><%=((String)session.getAttribute("uname")).toUpperCase()%></a></li>
+				<li><a href="LogoutServlet"><span
 						class="glyphicon glyphicon-log-out"></span>Logout</a></li>
 			</ul>
 		</div>
 	</nav>
-	
+
 	<script
 		src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script

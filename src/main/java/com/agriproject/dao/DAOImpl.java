@@ -129,4 +129,23 @@ public class DAOImpl implements AGDAO {
 		return result;
 	}
 
+	public boolean matchAdminWithPass(String name, String password) throws ClassNotFoundException, SQLException {
+		Connection con = dbc.getConnection();
+		String pass="";
+		PreparedStatement stmt = con.prepareStatement("select password from admin_details where name= ?");
+		stmt.setString(1, name);
+		ResultSet rs = stmt.executeQuery();
+		if(!rs.next())
+		{ System.out.println("pass2");
+			con.close();
+			return false;
+		}
+		else
+		{  
+			pass = rs.getString("password");
+		}
+		con.close();
+		return pass.equals(password);
+	}
+
 }

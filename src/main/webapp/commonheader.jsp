@@ -12,13 +12,16 @@
 	<nav class="navbar navbar-inverse navbar-static-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="#">Ag Project</a>
+				<a class="navbar-brand" href="#">Ag Project&nbsp;&nbsp;|&nbsp;&nbsp;Farmer</a>
 			</div>
+			
 			<ul class="nav navbar-nav navbar-right">
 				<li class="active"><a href="Registration"><span
-						class="glyphicon glyphicon-user"></span>Sign Up</a></li>
+						class="glyphicon glyphicon-user"></span> Farmer Sign Up</a></li>
 				<li><a href="LoginForm"><span
-						class="glyphicon glyphicon-log-in"></span>Login</a></li>
+						class="glyphicon glyphicon-log-in"></span> Farmer Login</a></li>
+				<li><a href="AdminLogout"><span
+						class="glyphicon glyphicon-log-in"></span> Admin Logout</a></li>
 			</ul>
 		</div>
 	</nav>

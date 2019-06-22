@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<jsp:include page="index.jsp"/>
+<jsp:include page="farmerIndex.jsp"/>
 <h2 align="center">Account Creation Successfull Please Login!</h2>
 <br>
 <br>

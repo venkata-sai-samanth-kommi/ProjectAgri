@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>success</title>
+<title>Insert title here</title>
 </head>
 <body>
-<jsp:include page="home.jsp"/>
-<h1 align="center">Successfully Inserted Data</h1>
+<jsp:include page="login.jsp"></jsp:include>
+<h1 align="center">Invalid Credentials</h1>
 </body>
 </html>

@@ -5,14 +5,10 @@
 <head>
 <meta charset="ISO-8859-1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-<title>Insert title here</title>
+<title>inputs taken</title>
 </head>
 <body onload="InputHistory">
 <jsp:include page="home.jsp"/>
-<%if(session.getAttribute("uname")==null)
-		response.sendRedirect("notloggedin.jsp");
-		else
-		out.println("elcome");%>
 <%String result[][] = (String[][])request.getAttribute("result"); %>
 <div class="container">
   <h2>Input Details</h2>         
@@ -21,7 +17,7 @@
       <tr>
       	<th>SNO</th>
         <th>NAME OF INPUT</th>
-        <th>QUIANTITY</th>
+        <th>QUANTITY</th>
         <th>PRICE PER PIECE</th>
         <th>TOTAL</th>
       </tr>

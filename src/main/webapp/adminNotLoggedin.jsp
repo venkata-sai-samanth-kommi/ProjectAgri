@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<jsp:include page="commonheader.jsp"/>
-Please login first.
+<jsp:include page="index.jsp"/>
+<h2 align="center">Please login first.</h2>
 </body>
 </html>
