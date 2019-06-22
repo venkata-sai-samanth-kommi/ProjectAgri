@@ -40,7 +40,7 @@ public class AdminLogin extends HttpServlet {
 			else
 			{
 				out.println("<h2 align='center'>Invalid Credentials</h2>");
-				RequestDispatcher rd = request.getRequestDispatcher("farmerIndex.jsp");
+				RequestDispatcher rd = request.getRequestDispatcher("adminNotFound.jsp");
 				rd.include(request, response);
 			}
 		} catch (ClassNotFoundException e) {
@@ -49,7 +49,7 @@ public class AdminLogin extends HttpServlet {
 		}
 		catch(SQLException e)
 		{
-			RequestDispatcher rd = request.getRequestDispatcher("farmerIndex.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("adminNotFound.jsp");
 			rd.include(request, response);
 		}
 		
