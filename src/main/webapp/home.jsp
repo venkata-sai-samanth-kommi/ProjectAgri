@@ -22,7 +22,7 @@
 						<li><a href="home.jsp">Crop Details</a></li>
 					</ul></li>
 				<li><a href="home.jsp"><span></span>ACTIVITIES</a></li>
-				<li><a href="inputHistoryForm.jsp"><span></span>INPUT ENTRY</a></li>
+				<li><a href="InputEntry"><span></span>INPUT ENTRY</a></li>
 				<li><a href="InputHistory"><span></span>INPUT HISTORY</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
@@ -38,8 +38,6 @@
 		src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script
 		src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-	<script>
-	alert();</script>
 </body>
 
 </html>

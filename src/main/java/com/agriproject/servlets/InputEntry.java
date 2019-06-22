@@ -8,31 +8,36 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class HomeController
+ * Servlet implementation class InputEntry
  */
-@WebServlet("/HomeController")
-public class HomeController extends HttpServlet {
+@WebServlet("/InputEntry")
+public class InputEntry extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public InputEntry() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		RequestDispatcher rd = request.getRequestDispatcher("inputHistoryForm.jsp");
+		rd.forward(request, response);
+	}
+
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		HttpSession hs = request.getSession(false);
-		if((hs!=null) && (hs.getAttribute("sessionTRruth")=="true") && hs.getAttribute("uname")!=null)
-		{
-			RequestDispatcher rd=request.getRequestDispatcher("home.jsp"); 
-			System.out.println(hs.getAttribute("uname"));
-			rd.forward(request, response);
-		}
-		else {
-			System.out.println("xxx");
-			RequestDispatcher rd=request.getRequestDispatcher("notloggedin.jsp"); 
-			rd.forward(request, response);
-		}
+		doGet(request, response);
 	}
+
 }

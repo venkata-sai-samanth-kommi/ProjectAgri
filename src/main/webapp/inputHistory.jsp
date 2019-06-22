@@ -9,6 +9,10 @@
 </head>
 <body onload="InputHistory">
 <jsp:include page="home.jsp"/>
+<%if(session.getAttribute("uname")==null)
+		response.sendRedirect("notloggedin.jsp");
+		else
+		out.println("elcome");%>
 <%String result[][] = (String[][])request.getAttribute("result"); %>
 <div class="container">
   <h2>Input Details</h2>         

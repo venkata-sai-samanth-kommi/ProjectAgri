@@ -38,6 +38,7 @@ public class LoginServlet extends HttpServlet {
 				hs.setAttribute("farmer_id", fid);
 				hs.setAttribute("uname", dbs.getFarmerDeatils(fid).getNameOfFarmer());
 				RequestDispatcher rd = request.getRequestDispatcher("HomeController");
+				System.out.println("bwjbrvjhb");
 				rd.forward(request, response);
 			} else {
 				out.print("user not found");

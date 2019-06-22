@@ -11,6 +11,10 @@
 
 </head>
 <body>
+	<%if(session.getAttribute("uname")==null)
+		response.sendRedirect("notloggedin.jsp");
+		else
+		out.println("elcome");%>
 	<jsp:include page="home.jsp" />
 	<div class="container" id="registrationform">
 		<h2>Input Entry Form</h2>
