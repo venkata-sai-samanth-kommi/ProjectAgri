@@ -11,6 +11,6 @@
 <title>projectagri</title>
 </head>
 <body>
-	<jsp:include page="registrationform.jsp"></jsp:include>
+	<jsp:include page="commonheader.jsp"></jsp:include>
 </body>
 </html>
