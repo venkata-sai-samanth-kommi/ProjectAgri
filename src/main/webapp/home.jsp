@@ -26,7 +26,7 @@
 				<li><a href="InputHistory"><span></span>INPUT HISTORY</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#" style="color:green"><span
+				<li><a href="#" style="color:white"><span
 						class="glyphicon glyphicon-user"></span><%=((String)session.getAttribute("uname")).toUpperCase()%></a></li>
 				<li><a href="LogoutServlet"><span
 						class="glyphicon glyphicon-log-out"></span>Logout</a></li>
