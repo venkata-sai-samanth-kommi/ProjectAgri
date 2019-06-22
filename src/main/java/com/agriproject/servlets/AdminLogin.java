@@ -43,11 +43,16 @@ public class AdminLogin extends HttpServlet {
 				RequestDispatcher rd = request.getRequestDispatcher("farmerIndex.jsp");
 				rd.include(request, response);
 			}
-		} catch (ClassNotFoundException | SQLException e) {
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		catch(SQLException e)
+		{
 			RequestDispatcher rd = request.getRequestDispatcher("farmerIndex.jsp");
 			rd.include(request, response);
 		}
 		
 	}
-
+	
 }
