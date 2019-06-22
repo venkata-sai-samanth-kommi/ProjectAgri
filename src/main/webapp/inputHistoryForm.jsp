@@ -22,12 +22,12 @@
 			</div>
 			<div class="form-group">
 				<label for="price">Price :</label> <input type="text"
-					 class="form-control" id="price"
+					onchange="totalCalculator()" class="form-control" id="price"
 					placeholder="Enter Price" name="price">
 			</div>
 			<div class="form-group">
 				<label for="quantity">Quantity :</label> <input type="text"
-					 class="form-control" id="quantity"
+					onchange="totalCalculator()" class="form-control" id="quantity"
 					placeholder="Enter Quantity" name="quantity">
 			</div>
 			<div class="form-group">
@@ -39,15 +39,9 @@
 		</form>
 	</div>
 	<script>
-	$("#price,#quantity").on(
-		{
-		focus : function() {
+	$("#price,#quantity").keyup(function() {
 		$('#total').val($('#price').val() * $('#quantity').val());
-		},
-		keyup : function() {
-		$('#total').val($('#price').val() * $('#quantity').val());
-		}
-		});
+	});
 </script>
 </body>
 </html>
