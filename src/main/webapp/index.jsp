@@ -14,7 +14,7 @@
 	<nav class="navbar navbar-inverse navbar-static-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="#">Ag Project&nbsp;&nbsp;|&nbsp;&nbsp;Admin</a>
+				<a class="navbar-brand" href="#" style="color:white">Ag Project&nbsp;&nbsp;|&nbsp;&nbsp;Admin</a>
 			</div>
 		</div>
 	</nav>
